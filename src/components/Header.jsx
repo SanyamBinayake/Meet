@@ -46,7 +46,7 @@ const Header = () => {
                         <div className="container hero-text-content">
                             <h1 className={index === currentSlide ? "slide-up" : ""}>{slide.title}</h1>
                             <p className={index === currentSlide ? "fade-in delay-200" : ""}>{slide.subtitle}</p>
-                            <a href="tel:1234567890" className={`hero-cta ${index === currentSlide ? "bounce-in delay-400" : ""}`}>
+                            <a href="tel:7219304433" className={`hero-cta ${index === currentSlide ? "bounce-in delay-400" : ""}`}>
                                 Call Coordinator Now
                             </a>
                         </div>

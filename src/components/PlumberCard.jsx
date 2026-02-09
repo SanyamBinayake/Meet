@@ -66,11 +66,11 @@ const PlumberCard = ({ plumber }) => {
                 )}
 
                 <div className="action-buttons">
-                    <a href="tel:1234567890" className="btn btn-primary">
+                    <a href="tel:7219304433" className="btn btn-primary">
                         <Phone size={18} /> Book Now
                     </a>
                     <a
-                        href={`https://wa.me/911234567890?text=Hi, I want to book ${plumber.name} for a service starting at ₹199.`}
+                        href={`https://wa.me/917219304433?text=Hi, I want to book ${plumber.name} for a service starting at ₹199.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-whatsapp"

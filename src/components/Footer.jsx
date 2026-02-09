@@ -23,7 +23,7 @@ const Footer = () => {
             </footer>
 
             <div className="sticky-mobile-footer">
-                <a href="tel:1234567890" className="sticky-btn">
+                <a href="tel:7219304433" className="sticky-btn">
                     <Phone size={20} /> Call Coordinator Now
                 </a>
             </div>

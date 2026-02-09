@@ -25,7 +25,7 @@ const Navbar = () => {
                     <a href="#services">Services</a>
                     <a href="#workflow">How it Works</a>
                     <a href="#reviews">Reviews</a>
-                    <a href="tel:1234567890" className="cta-button pulse-animation">
+                    <a href="tel:7219304433" className="cta-button pulse-animation">
                         <Phone size={18} />
                         <span>Call Coordinator</span>
                     </a>
@@ -44,7 +44,7 @@ const Navbar = () => {
                     <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
                     <a href="#workflow" onClick={() => setIsMobileMenuOpen(false)}>How it Works</a>
                     <a href="#reviews" onClick={() => setIsMobileMenuOpen(false)}>Reviews</a>
-                    <a href="tel:1234567890" className="mobile-cta" onClick={() => setIsMobileMenuOpen(false)}>
+                    <a href="tel:7219304433" className="mobile-cta" onClick={() => setIsMobileMenuOpen(false)}>
                         <Phone size={18} /> Call Coordinator
                     </a>
                 </div>
