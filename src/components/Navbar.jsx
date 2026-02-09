@@ -17,8 +17,8 @@ const Navbar = () => {
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-content">
                 <div className="logo">
-                    <h2>Meet Plumbing Services</h2>
-                    <span className="slogan">Expert Plumbing Solutions</span>
+                    <h2>PlumFix</h2>
+                    <span className="slogan">Your pipe our responsibility</span>
                 </div>
 
                 <div className="desktop-nav">

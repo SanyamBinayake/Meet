@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-content">
                         <div className="footer-brand">
-                            <h3>Meet Plumbing Services</h3>
+                            <h3>PlumFix</h3>
                             <p>Serving Jalna & Nearby Areas</p>
                         </div>
                         <div className="social-links">
@@ -17,7 +17,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="footer-bottom">
-                        <p>&copy; 2024 Meet Plumbing Services. All rights reserved.</p>
+                        <p>&copy; 2024 PlumFix. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
