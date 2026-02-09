@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Ramesh Kumar",
+        "rating": 4.8,
+        "specialty": "Pipe Fitting",
+        "price": "199",
+        "status": "Available",
+        "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "location": "Old Jalna",
+        "reviews": [
+            {
+                "user": "Amit Sharma",
+                "comment": "Excellent work, fixed the leak in minutes!",
+                "rating": 5
+            },
+            {
+                "user": "Rahul V.",
+                "comment": "Very professional and polite.",
+                "rating": 4.5
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Suresh Patil",
+        "rating": 4.5,
+        "specialty": "Tank Cleaning",
+        "price": "299",
+        "status": "Busy",
+        "image": "https://images.unsplash.com/photo-1542596594-649edbc13630?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "location": "New Jalna",
+        "reviews": [
+            {
+                "user": "Priya D.",
+                "comment": "Cleaned the tank thoroughly.",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Arun Deshmukh",
+        "rating": 4.9,
+        "specialty": "Leak Repair",
+        "price": "249",
+        "status": "Available",
+        "image": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "location": "Jalna MIDC",
+        "reviews": [
+            {
+                "user": "Vikram S.",
+                "comment": "Best plumber in Jalna.",
+                "rating": 5
+            },
+            {
+                "user": "Neha K.",
+                "comment": "Quick service.",
+                "rating": 4.8
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Vijay Singh",
+        "rating": 4.6,
+        "specialty": "Installation",
+        "price": "349",
+        "status": "Available",
+        "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "location": "Mantha Road",
+        "reviews": []
+    }
+]
