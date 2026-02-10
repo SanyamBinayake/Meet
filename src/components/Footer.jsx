@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Instagram, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
@@ -18,6 +19,7 @@ const Footer = () => {
                     </div>
                     <div className="footer-bottom">
                         <p>&copy; 2024 PlumFix. All rights reserved.</p>
+                        <Link to="/admin/login" style={{ fontSize: '0.8rem', color: '#666', textDecoration: 'none', marginLeft: '1rem' }}>Admin Login</Link>
                     </div>
                 </div>
             </footer>

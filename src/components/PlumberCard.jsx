@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { Star, MessageCircle, Phone, CheckCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import PropTypes from 'prop-types';
+import AddReview from './AddReview';
 
-const PlumberCard = ({ plumber }) => {
+const PlumberCard = ({ plumber, onReviewAdded }) => {
     const [showReviews, setShowReviews] = useState(false);
+    const [showAddReview, setShowAddReview] = useState(false);
+
+    const handleReviewAdded = () => {
+        alert('Review submitted successfully!');
+        // Refresh the list to show new review and updated rating
+        if (onReviewAdded) onReviewAdded();
+    };
 
     return (
         <div className="plumber-card">
@@ -38,32 +46,34 @@ const PlumberCard = ({ plumber }) => {
                     <span className="chip price">From ₹{plumber.price}</span>
                 </div>
 
-                {plumber.reviews && plumber.reviews.length > 0 && (
-                    <div className="reviews-section">
-                        <button
-                            className="toggle-reviews-btn"
-                            onClick={() => setShowReviews(!showReviews)}
-                        >
-                            {showReviews ? 'Hide Reviews' : 'Show Recent Reviews'}
-                            {showReviews ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                        </button>
+                <div className="reviews-section">
+                    <button
+                        className="toggle-reviews-btn"
+                        onClick={() => setShowReviews(!showReviews)}
+                    >
+                        {showReviews ? 'Hide Reviews' : 'Show Recent Reviews'}
+                        {showReviews ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                    </button>
 
-                        {showReviews && (
-                            <div className="reviews-list">
-                                {plumber.reviews.slice(0, 2).map((review, idx) => (
+                    {showReviews && (
+                        <div className="reviews-list">
+                            {plumber.reviews && plumber.reviews.length > 0 ? (
+                                plumber.reviews.slice(0, 2).map((review, idx) => (
                                     <div key={idx} className="review-item">
                                         <div className="review-header">
-                                            <span className="review-user">{review.user}</span>
+                                            <span className="review-user">{review.user_name || review.user}</span>
                                             <span className="review-rating"><Star size={10} fill="#ffb703" stroke="none" /> {review.rating}</span>
                                         </div>
                                         <p className="review-comment">"{review.comment}"</p>
                                     </div>
-                                ))}
-                                <button className="add-review-btn">Write a Review</button>
-                            </div>
-                        )}
-                    </div>
-                )}
+                                ))
+                            ) : (
+                                <p style={{ fontSize: '0.8rem', color: '#666', fontStyle: 'italic' }}>No reviews yet.</p>
+                            )}
+                        </div>
+                    )}
+                    <button className="add-review-btn" onClick={() => setShowAddReview(true)}>Write a Review</button>
+                </div>
 
                 <div className="action-buttons">
                     <a href="tel:7219304433" className="btn btn-primary">
@@ -79,6 +89,14 @@ const PlumberCard = ({ plumber }) => {
                     </a>
                 </div>
             </div>
+
+            {showAddReview && (
+                <AddReview
+                    plumberId={plumber.id}
+                    onClose={() => setShowAddReview(false)}
+                    onReviewAdded={handleReviewAdded}
+                />
+            )}
         </div>
     );
 };
@@ -94,6 +112,7 @@ PlumberCard.propTypes = {
         image: PropTypes.string.isRequired,
         location: PropTypes.string.isRequired,
         reviews: PropTypes.arrayOf(PropTypes.shape({
+            user_name: PropTypes.string,
             user: PropTypes.string,
             comment: PropTypes.string,
             rating: PropTypes.number
